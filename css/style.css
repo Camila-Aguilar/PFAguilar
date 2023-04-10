@@ -1,165 +1,61 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-background-color: burlywood;
-margin-top: 0;
-position: relative;
-padding-bottom: 40px;
-}
-header{
-  width: 100%;
-  height: 80px;
-  background-color: burlywood;
+
+body {
+  background-color: #deb877;
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 40px;
 }
 
-main{
+.destacados {
+  color: black;
+  text-align: center;
+  text-decoration: double;
+}
+
+.carru {
+  width: 100%;
+  height: 300px;
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 20%;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #deb877;
+}
+header .titulo {
+  color: white;
+  text-align: center;
+  text-decoration: overline;
+}
+
+main {
   margin-top: 0px;
   width: 100%;
   height: auto;
   margin: 0px;
   padding: 0px;
   padding-top: 0px;
-}
-footer{
-  background-color: burlywood;
-}
-
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 37.5%; 
-}
-
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.buttons {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.buttons a {
-  margin-right: 10px;
-}
-
-.buttons a:last-child {
-  margin-right: 0;
-}
-
-.buttons a.btn-outline-light {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff;
-}
-
-.buttons a.btn-outline-light:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-header .titulo{
-  color:white;
-  text-align: center;
-  text-decoration: overline;
-}
-
-.destacados{
-  color: black;
-  text-align: center;
-  text-decoration: double;
-}
-
-
-.carru{
-  width: 100%;
-  height: 300px;
-}
-
-.ig,
-.fb,
-.wpp,
-.gmail{
-  width: 25px;
-  height: auto;
-}
-
-.productos{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.producto,
-.producto1,
-.producto2{
-  width: 300px;
-  margin: 10px;
-  border-radius: 10px;
-  border: 2px solid;
-}
-.producto img,
-.producto1 img,
-.producto2 img{
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.producto h3,
-.producto1 h3,
-.producto2 h3{
-  text-align: center;
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.producto p,
-.producto1 p,
-.producto2 p{
-  padding: 10px;
-}
-
-.producto button,
-.producto1 button,
-.producto2 button{
-  margin: 10px;
-  padding: 5px 15px;
-  background-color: orange;
-  border: 0;
-  border-radius: 5px;
-  color: black;
-}
-
-footer h3{
-  font-size: 10px;
-}
-
-.site-footer {
-  background-color: burlywood;
-  padding: 15px;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-}
-@media (max-width: 767px) {
-  .site-footer {
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -191,7 +87,6 @@ footer h3{
     padding: 0.5rem 1rem;
   }
 }
-
 @media screen and (min-width: 769px) {
   main .container {
     padding: 0;
@@ -225,22 +120,128 @@ footer h3{
     padding: 0.75rem 1.5rem;
   }
 }
-
-.map-container {
+.video-container {
   position: relative;
-  overflow: hidden;
-  padding-top: 20%;
-  max-width: 50%;
-  margin: 0 auto;
+  width: 100%;
+  height: 0;
+  padding-bottom: 37.5%;
 }
-
-
-.map-container iframe {
+.video-container video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.video-container .buttons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.video-container .buttons a {
+  margin-right: 10px;
+}
+.video-container .buttons a .last-child {
+  margin-right: 0;
+}
+.video-container .buttons a .btn-outline-light {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.video-container .buttons a .btn-outline-lighthover {
+  background-color: #fff;
+  color: #000;
 }
 
+.destacados {
+  color: black;
+  text-align: center;
+  text-decoration: double;
+}
 
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.productos .producto,
+.productos .producto1,
+.productos .producto2 {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+.productos .producto img,
+.productos .producto1 img,
+.productos .producto2 img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.productos .producto img:hover,
+.productos .producto1 img:hover,
+.productos .producto2 img:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+.productos .producto h3,
+.productos .producto1 h3,
+.productos .producto2 h3 {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.productos .producto p,
+.productos .producto1 p,
+.productos .producto2 p {
+  padding: 10px;
+}
+.productos .producto button,
+.productos .producto1 button,
+.productos .producto2 button {
+  background-color: orange;
+  color: black;
+}
+
+.site-footer {
+  background-color: #deb877;
+  padding: 0px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.site-footer h3 {
+  font-size: 10px;
+}
+.site-footer .ig,
+.site-footer .fb,
+.site-footer .wpp,
+.site-footer .gmail {
+  width: 25px;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    position: relative;
+  }
+}
+.productos .producto button,
+.productos .producto1 button,
+.productos .producto2 button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

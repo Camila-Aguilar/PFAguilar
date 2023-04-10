@@ -1,0 +1,9 @@
+@mixin determ ($width, $height, $bg) {
+    width: $width;
+    height: $height;
+    background-color: $bg;
+  }
+  
+
+
+
