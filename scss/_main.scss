@@ -2,6 +2,7 @@ main{
     width: 100%;
     margin: 0px;
     padding: 0px;
+    background-color: $bg-color;
   }
 
   @media screen and (max-width: 768px) {
@@ -70,3 +71,4 @@ main{
       height: auto;
     }
   }
+
