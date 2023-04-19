@@ -1,25 +1,23 @@
 main{
-    margin-top: 0px;
     width: 100%;
-    height: auto;
     margin: 0px;
     padding: 0px;
-    padding-top: 0px;
   }
 
   @media screen and (max-width: 768px) {
-    main .container {
-      padding: 0;
+    main{
+      min-height: 80vh;
     }
     main .video-container {
       width: 100%;
       height: auto;
       overflow: hidden;
+      min-height: 60vh;
     }
     main .video-container video {
       width: 100%;
       height: auto;
-      min-height: 50vh;
+      min-height: 60vh;
       object-fit: cover;
       display: block;
       margin: 0 auto;
@@ -38,14 +36,6 @@ main{
   }
   
   @media screen and (min-width: 769px) {
-    main .container {
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
     main .video-container {
       width: 100%;
       height: auto;
@@ -70,4 +60,13 @@ main{
       padding: 0.75rem 1.5rem;
     }
   }
-
+  .textex h3 {
+    font-family: "Raleway-Regular", sans-serif;
+    font-size: 16px;
+  }
+  @media (max-width: 767px) {
+    .img-fluid {
+      width: 100%;
+      height: auto;
+    }
+  }
