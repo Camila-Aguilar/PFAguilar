@@ -3,6 +3,7 @@ main{
     margin: 0px;
     padding: 0px;
     background-color: $bg-color;
+    height: auto;
   }
 
   @media screen and (max-width: 768px) {
@@ -36,34 +37,50 @@ main{
     }
   }
   
-  @media screen and (min-width: 769px) {
-    main .video-container {
-      width: 100%;
-      height: auto;
-      overflow: hidden;
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h1 {
+      text-align: center;
+      color: white;
     }
-    main .video-container video {
-      width: 100%;
-      height: auto;
-      min-height: 50vh;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-    main .buttons {
+  
+    .image-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      margin-top: 1rem;
-    }
-    main .buttons .btn {
-      margin: 0.5rem;
-      font-size: 1.2rem;
-      padding: 0.75rem 1.5rem;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 1000px;
+        max-height: 700px;
+      }
+  
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+  
+        a {
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+      }
     }
   }
-  .textex h3 {
-    font-family: "Raleway-Regular", sans-serif;
-    font-size: 16px;
+  .textex {
+    background-color: #f9b25b;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 767px) {
     .img-fluid {
@@ -72,3 +89,8 @@ main{
     }
   }
 
+.image-container{
+  img{
+    border-radius: 10px;
+  }
+}
